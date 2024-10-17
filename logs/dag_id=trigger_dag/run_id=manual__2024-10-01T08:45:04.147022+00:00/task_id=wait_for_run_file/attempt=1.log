@@ -1,0 +1,34 @@
+[2024-10-01T08:45:05.750+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-01T08:45:05.760+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: trigger_dag.wait_for_run_file manual__2024-10-01T08:45:04.147022+00:00 [queued]>
+[2024-10-01T08:45:05.765+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: trigger_dag.wait_for_run_file manual__2024-10-01T08:45:04.147022+00:00 [queued]>
+[2024-10-01T08:45:05.766+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-10-01T08:45:05.772+0000] {taskinstance.py:2888} INFO - Executing <Task(FileSensor): wait_for_run_file> on 2024-10-01 08:45:04.147022+00:00
+[2024-10-01T08:45:05.776+0000] {warnings.py:112} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=480) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-01T08:45:05.777+0000] {standard_task_runner.py:72} INFO - Started process 484 to run task
+[2024-10-01T08:45:05.778+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'trigger_dag', 'wait_for_run_file', 'manual__2024-10-01T08:45:04.147022+00:00', '--job-id', '61', '--raw', '--subdir', 'DAGS_FOLDER/trigger_dag.py', '--cfg-path', '/tmp/tmp3fhdyzcv']
+[2024-10-01T08:45:05.779+0000] {standard_task_runner.py:105} INFO - Job 61: Subtask wait_for_run_file
+[2024-10-01T08:45:05.817+0000] {task_command.py:467} INFO - Running <TaskInstance: trigger_dag.wait_for_run_file manual__2024-10-01T08:45:04.147022+00:00 [running]> on host ff60ea0b688d
+[2024-10-01T08:45:05.876+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='trigger_dag' AIRFLOW_CTX_TASK_ID='wait_for_run_file' AIRFLOW_CTX_EXECUTION_DATE='2024-10-01T08:45:04.147022+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-01T08:45:04.147022+00:00'
+[2024-10-01T08:45:05.877+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-10-01T08:45:05.877+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-10-01T08:45:05.878+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_run_file state:running start_date:2024-10-01 08:45:05.761220+00:00
+[2024-10-01T08:45:05.878+0000] {logging_mixin.py:190} INFO - Dag name:trigger_dag and current dag run status:running
+[2024-10-01T08:45:05.879+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-01T08:45:05.879+0000] {baseoperator.py:405} WARNING - FileSensor.execute cannot be called outside TaskInstance!
+[2024-10-01T08:45:05.887+0000] {base.py:84} INFO - Retrieving connection 'fs_default'
+[2024-10-01T08:45:05.889+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/data/small_text.txt
+[2024-10-01T08:45:05.890+0000] {filesystem.py:113} INFO - Found File /opt/airflow/data/small_text.txt last modified: 20241001082556
+[2024-10-01T08:45:05.890+0000] {base.py:336} INFO - Success criteria met. Exiting.
+[2024-10-01T08:45:05.891+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/data/small_text.txt
+[2024-10-01T08:45:05.891+0000] {filesystem.py:113} INFO - Found File /opt/airflow/data/small_text.txt last modified: 20241001082556
+[2024-10-01T08:45:05.899+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-01T08:45:05.899+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=trigger_dag, task_id=wait_for_run_file, run_id=manual__2024-10-01T08:45:04.147022+00:00, execution_date=20241001T084504, start_date=20241001T084505, end_date=20241001T084505
+[2024-10-01T08:45:05.905+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-10-01T08:45:05.905+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-10-01T08:45:05.905+0000] {logging_mixin.py:190} INFO - Dag name:trigger_dag queued_at:2024-10-01 08:45:04.164484+00:00
+[2024-10-01T08:45:05.905+0000] {logging_mixin.py:190} INFO - Task hostname:ff60ea0b688d operator:FileSensor
+[2024-10-01T08:45:05.920+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-01T08:45:05.945+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-10-01T08:45:05.946+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

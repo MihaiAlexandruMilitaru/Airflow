@@ -1,0 +1,37 @@
+[2024-10-08T10:40:05.075+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-08T10:40:05.086+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: trigger_dag.wait_for_run_file manual__2024-10-08T10:40:03.849759+00:00 [queued]>
+[2024-10-08T10:40:05.090+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: trigger_dag.wait_for_run_file manual__2024-10-08T10:40:03.849759+00:00 [queued]>
+[2024-10-08T10:40:05.091+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-10-08T10:40:05.098+0000] {taskinstance.py:2888} INFO - Executing <Task(FileSensor): wait_for_run_file> on 2024-10-08 10:40:03.849759+00:00
+[2024-10-08T10:40:05.102+0000] {warnings.py:112} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=1009) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-08T10:40:05.103+0000] {standard_task_runner.py:72} INFO - Started process 1011 to run task
+[2024-10-08T10:40:05.104+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'trigger_dag', 'wait_for_run_file', 'manual__2024-10-08T10:40:03.849759+00:00', '--job-id', '230', '--raw', '--subdir', 'DAGS_FOLDER/trigger_dag.py', '--cfg-path', '/tmp/tmpz87gw11r']
+[2024-10-08T10:40:05.104+0000] {standard_task_runner.py:105} INFO - Job 230: Subtask wait_for_run_file
+[2024-10-08T10:40:05.140+0000] {task_command.py:467} INFO - Running <TaskInstance: trigger_dag.wait_for_run_file manual__2024-10-08T10:40:03.849759+00:00 [running]> on host ea4b7cb1f1d7
+[2024-10-08T10:40:05.196+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='trigger_dag' AIRFLOW_CTX_TASK_ID='wait_for_run_file' AIRFLOW_CTX_EXECUTION_DATE='2024-10-08T10:40:03.849759+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-08T10:40:03.849759+00:00'
+[2024-10-08T10:40:05.198+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-10-08T10:40:05.198+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-10-08T10:40:05.198+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_run_file state:running start_date:2024-10-08 10:40:05.086575+00:00
+[2024-10-08T10:40:05.198+0000] {logging_mixin.py:190} INFO - Dag name:trigger_dag and current dag run status:running
+[2024-10-08T10:40:05.199+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-08T10:40:05.199+0000] {baseoperator.py:405} WARNING - FileSensor.execute cannot be called outside TaskInstance!
+[2024-10-08T10:40:05.205+0000] {base.py:84} INFO - Retrieving connection 'fs_default'
+[2024-10-08T10:40:05.206+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/data/small_text.txt
+[2024-10-08T10:41:05.215+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/data/small_text.txt
+[2024-10-08T10:42:05.221+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/data/small_text.txt
+[2024-10-08T10:43:05.232+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/data/small_text.txt
+[2024-10-08T10:44:05.241+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/data/small_text.txt
+[2024-10-08T10:45:05.246+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/data/small_text.txt
+[2024-10-08T10:46:05.258+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/data/small_text.txt
+[2024-10-08T10:47:05.260+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/data/small_text.txt
+[2024-10-08T10:48:05.266+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/data/small_text.txt
+[2024-10-08T10:49:05.267+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/data/small_text.txt
+[2024-10-08T10:50:05.274+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/data/small_text.txt
+[2024-10-08T10:51:05.278+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/data/small_text.txt
+[2024-10-08T10:52:05.289+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/data/small_text.txt
+[2024-10-08T10:53:05.295+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/data/small_text.txt
+[2024-10-08T10:54:05.305+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/data/small_text.txt
+[2024-10-08T10:55:05.315+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/data/small_text.txt
+[2024-10-08T10:56:05.322+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/data/small_text.txt

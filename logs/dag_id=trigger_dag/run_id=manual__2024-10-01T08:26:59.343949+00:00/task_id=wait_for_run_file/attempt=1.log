@@ -1,0 +1,143 @@
+[2024-10-01T08:27:00.417+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-01T08:27:00.428+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: trigger_dag.wait_for_run_file manual__2024-10-01T08:26:59.343949+00:00 [queued]>
+[2024-10-01T08:27:00.433+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: trigger_dag.wait_for_run_file manual__2024-10-01T08:26:59.343949+00:00 [queued]>
+[2024-10-01T08:27:00.433+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-10-01T08:27:00.440+0000] {taskinstance.py:2888} INFO - Executing <Task(FileSensor): wait_for_run_file> on 2024-10-01 08:26:59.343949+00:00
+[2024-10-01T08:27:00.445+0000] {warnings.py:112} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=211) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-01T08:27:00.446+0000] {standard_task_runner.py:72} INFO - Started process 213 to run task
+[2024-10-01T08:27:00.447+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'trigger_dag', 'wait_for_run_file', 'manual__2024-10-01T08:26:59.343949+00:00', '--job-id', '53', '--raw', '--subdir', 'DAGS_FOLDER/trigger_dag.py', '--cfg-path', '/tmp/tmpj2wugl3v']
+[2024-10-01T08:27:00.448+0000] {standard_task_runner.py:105} INFO - Job 53: Subtask wait_for_run_file
+[2024-10-01T08:27:00.484+0000] {task_command.py:467} INFO - Running <TaskInstance: trigger_dag.wait_for_run_file manual__2024-10-01T08:26:59.343949+00:00 [running]> on host ff60ea0b688d
+[2024-10-01T08:27:00.535+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='trigger_dag' AIRFLOW_CTX_TASK_ID='wait_for_run_file' AIRFLOW_CTX_EXECUTION_DATE='2024-10-01T08:26:59.343949+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-01T08:26:59.343949+00:00'
+[2024-10-01T08:27:00.537+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-10-01T08:27:00.537+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-10-01T08:27:00.537+0000] {logging_mixin.py:190} INFO - Current task name:wait_for_run_file state:running start_date:2024-10-01 08:27:00.429035+00:00
+[2024-10-01T08:27:00.537+0000] {logging_mixin.py:190} INFO - Dag name:trigger_dag and current dag run status:running
+[2024-10-01T08:27:00.537+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-01T08:27:00.538+0000] {baseoperator.py:405} WARNING - FileSensor.execute cannot be called outside TaskInstance!
+[2024-10-01T08:27:00.543+0000] {base.py:84} INFO - Retrieving connection 'fs_default'
+[2024-10-01T08:27:00.544+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:28:00.545+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:29:00.555+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:30:00.565+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:31:00.573+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:32:00.579+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:33:00.585+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:34:00.593+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:35:00.598+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:36:00.599+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:37:00.612+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:38:00.620+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:39:00.623+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:40:00.632+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:41:00.647+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:42:00.659+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:43:00.667+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:44:00.669+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:45:00.679+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:46:00.686+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:47:00.705+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:48:00.717+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:49:00.737+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:50:00.751+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:51:00.765+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:52:00.773+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:53:00.782+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:54:00.797+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:55:00.808+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:56:00.810+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:57:00.815+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:58:00.822+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T08:59:00.828+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:00:00.833+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:01:00.838+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:02:00.845+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:03:00.860+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:04:00.877+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:05:00.889+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:06:00.911+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:07:00.916+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:08:00.928+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:09:00.944+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:10:00.953+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:11:00.960+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:12:00.969+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:13:00.981+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:14:00.987+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:15:00.999+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:16:01.011+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:17:01.023+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:18:01.029+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:19:01.042+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:20:01.053+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:21:01.057+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:22:01.062+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:23:01.064+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:24:01.070+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:25:03.207+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:25:58.295+0000] {job.py:229} INFO - Heartbeat recovered after 23.07 seconds
+[2024-10-01T09:26:21.209+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:26:50.387+0000] {job.py:229} INFO - Heartbeat recovered after 26.86 seconds
+[2024-10-01T09:27:43.048+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:28:14.675+0000] {job.py:229} INFO - Heartbeat recovered after 28.77 seconds
+[2024-10-01T09:33:01.616+0000] {job.py:229} INFO - Heartbeat recovered after 261.70 seconds
+[2024-10-01T09:33:23.416+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:39:59.288+0000] {job.py:229} INFO - Heartbeat recovered after 362.15 seconds
+[2024-10-01T09:40:20.534+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:41:20.506+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:42:20.514+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:43:25.864+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T09:44:25.877+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:01:02.550+0000] {job.py:229} INFO - Heartbeat recovered after 995.62 seconds
+[2024-10-01T10:01:56.449+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:16:27.712+0000] {job.py:229} INFO - Heartbeat recovered after 869.17 seconds
+[2024-10-01T10:17:20.601+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:18:20.612+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:19:20.624+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:20:20.634+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:21:20.653+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:22:20.661+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:23:20.669+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:24:20.679+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:25:20.687+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:26:20.701+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:27:20.716+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:28:20.728+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:29:20.738+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:30:20.752+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:31:20.761+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:32:20.772+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:33:20.781+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:34:20.794+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:35:20.806+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:36:20.812+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:37:20.817+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:38:20.828+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:39:20.841+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:40:20.853+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:41:20.905+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:42:20.913+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:43:20.920+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:44:20.927+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:45:20.939+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:46:20.947+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:47:20.949+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:48:20.960+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:49:20.969+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:50:20.982+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:51:20.984+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:52:20.995+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:53:21.010+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:54:21.015+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:55:21.021+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T10:56:21.025+0000] {filesystem.py:109} INFO - Poking for file /opt/airflow/dataremove_small_text.txt
+[2024-10-01T11:12:47.751+0000] {job.py:229} INFO - Heartbeat recovered after 982.82 seconds
+[2024-10-01T11:12:52.791+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2024-10-01T11:12:52.793+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2024-10-01T11:12:52.795+0000] {process_utils.py:132} INFO - Sending 15 to group 213. PIDs of all processes in the group: [213]
+[2024-10-01T11:12:52.796+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 213
+[2024-10-01T11:12:52.797+0000] {taskinstance.py:3092} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-10-01T11:12:52.832+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-01T11:12:52.853+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=213, status='terminated', exitcode=0, started='08:27:00') (213) terminated with exit code 0

@@ -1,0 +1,32 @@
+[2024-10-07T15:56:39.971+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-07T15:56:39.982+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sql_dag.insert_new_row manual__2024-10-07T15:56:34.576011+00:00 [queued]>
+[2024-10-07T15:56:39.986+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sql_dag.insert_new_row manual__2024-10-07T15:56:34.576011+00:00 [queued]>
+[2024-10-07T15:56:39.987+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-10-07T15:56:39.992+0000] {taskinstance.py:2888} INFO - Executing <Task(SQLExecuteQueryOperator): insert_new_row> on 2024-10-07 15:56:34.576011+00:00
+[2024-10-07T15:56:39.995+0000] {warnings.py:112} WARNING - /home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=454) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-07T15:56:39.996+0000] {standard_task_runner.py:72} INFO - Started process 456 to run task
+[2024-10-07T15:56:39.996+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'sql_dag', 'insert_new_row', 'manual__2024-10-07T15:56:34.576011+00:00', '--job-id', '218', '--raw', '--subdir', 'DAGS_FOLDER/sql.py', '--cfg-path', '/tmp/tmp_4ugk2ad']
+[2024-10-07T15:56:39.997+0000] {standard_task_runner.py:105} INFO - Job 218: Subtask insert_new_row
+[2024-10-07T15:56:40.027+0000] {task_command.py:467} INFO - Running <TaskInstance: sql_dag.insert_new_row manual__2024-10-07T15:56:34.576011+00:00 [running]> on host ea4b7cb1f1d7
+[2024-10-07T15:56:40.076+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='sql_dag' AIRFLOW_CTX_TASK_ID='insert_new_row' AIRFLOW_CTX_EXECUTION_DATE='2024-10-07T15:56:34.576011+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-07T15:56:34.576011+00:00'
+[2024-10-07T15:56:40.076+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-10-07T15:56:40.077+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-10-07T15:56:40.077+0000] {logging_mixin.py:190} INFO - Current task name:insert_new_row state:running start_date:2024-10-07 15:56:39.983084+00:00
+[2024-10-07T15:56:40.077+0000] {logging_mixin.py:190} INFO - Dag name:sql_dag and current dag run status:running
+[2024-10-07T15:56:40.077+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-07T15:56:40.077+0000] {sql.py:266} INFO - Executing: INSERT INTO table_name VALUES(%s, %s, %s);
+[2024-10-07T15:56:40.083+0000] {base.py:84} INFO - Retrieving connection 'postgres_default'
+[2024-10-07T15:56:40.088+0000] {base.py:84} INFO - Retrieving connection 'postgres_default'
+[2024-10-07T15:56:40.091+0000] {sql.py:509} INFO - Running statement: INSERT INTO table_name VALUES(%s, %s, %s);, parameters: (35521867, '24f6be26a2', datetime.datetime(2024, 10, 7, 15, 56, 39, 615781))
+[2024-10-07T15:56:40.091+0000] {sql.py:518} INFO - Rows affected: 1
+[2024-10-07T15:56:40.098+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-07T15:56:40.099+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=sql_dag, task_id=insert_new_row, run_id=manual__2024-10-07T15:56:34.576011+00:00, execution_date=20241007T155634, start_date=20241007T155639, end_date=20241007T155640
+[2024-10-07T15:56:40.104+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-10-07T15:56:40.104+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-10-07T15:56:40.104+0000] {logging_mixin.py:190} INFO - Dag name:sql_dag queued_at:2024-10-07 15:56:34.595441+00:00
+[2024-10-07T15:56:40.104+0000] {logging_mixin.py:190} INFO - Task hostname:ea4b7cb1f1d7 operator:SQLExecuteQueryOperator
+[2024-10-07T15:56:40.138+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-07T15:56:40.153+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-10-07T15:56:40.154+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
