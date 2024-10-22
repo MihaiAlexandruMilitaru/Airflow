@@ -1,6 +1,6 @@
 # Airflow Connections Setup
 
-This README provides instructions for configuring necessary connections in the Airflow UI to ensure integration with services like PostgreSQL, Slack, and Spark.
+This README provides instructions for configuring necessary connections in the Airflow UI, and additional key-value setups required for integration with services like PostgreSQL, Slack, Spark, and others.
 
 ## Prerequisites
 
@@ -62,4 +62,82 @@ Ensure that your Airflow instance is up and running. Access the Airflow UI, typi
 
 ### 4. `slack_webhook` (Slack Webhook)
 
-| Field             | Value                  
+| Field             | Value                  |
+|-------------------|------------------------|
+| **Conn Id**        | `slack_webhook`        |
+| **Conn Type**      | `slackwebhook`         |
+| **Host**           | _Leave empty_          |
+| **Port**           | _Leave empty_          |
+| **Is Encrypted**   | `False`                |
+| **Is Extra Encrypted** | `False`            |
+| **Description**    | Slack Webhook connection (Optional) |
+
+---
+
+### 5. `spark` (Spark)
+
+| Field             | Value                  |
+|-------------------|------------------------|
+| **Conn Id**        | `spark`                |
+| **Conn Type**      | `spark`                |
+| **Host**           | `spark://spark`        |
+| **Port**           | `7077`                 |
+| **Is Encrypted**   | `False`                |
+| **Is Extra Encrypted** | `False`            |
+| **Description**    | Spark cluster connection (Optional) |
+
+---
+
+## Adding Key-Value Pairs in Airflow UI
+
+You may also need to add certain key-value configurations in Airflow for specific use cases, like setting file paths or adding webhook URLs.
+
+1. **Navigate to the Variables Page**  
+   - In the Airflow UI, go to **Admin** > **Variables**.
+
+2. **Add New Key-Value Pairs**  
+   - Click the **"+"** button to add the following key-value pairs:
+
+### Key-Value Pair Details
+
+### 1. `container_path`
+
+| Field             | Value                  |
+|-------------------|------------------------|
+| **Key**            | `container_path`       |
+| **Value**          | `.`                    |
+| **Is Encrypted**   | `False`                |
+| **Description**    | (Optional) |
+
+---
+
+### 2. `path`
+
+| Field             | Value                  |
+|-------------------|------------------------|
+| **Key**            | `path`                 |
+| **Value**          | `/small_text.txt`      |
+| **Is Encrypted**   | `False`                |
+| **Description**    | (Optional) |
+
+---
+
+### 3. `slack_key`
+
+| Field             | Value                  |
+|-------------------|------------------------|
+| **Key**            | `slack_key`            |
+| **Value**          | `https://hooks.slack.com/services/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` |
+| **Is Encrypted**   | `False`                |
+| **Description**    | Slack webhook URL |
+
+---
+
+## Final Steps
+
+- Once the connections and variables are added, they will be available for use within your Airflow DAGs.
+- Make sure to reference these keys in your DAG scripts where necessary.
+
+---
+
+With this setup, your Airflow instance will be able to interact with PostgreSQL, Slack, Spark, and local filesystem resources, along with managing key variables like file paths and webhook URLs.
