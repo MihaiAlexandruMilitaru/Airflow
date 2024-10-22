@@ -55,7 +55,7 @@ with DAG(
             provide_context = True
         )
         t3 = BashOperator(
-            task_id = "small_text.txt.txt",
+            task_id = "small_text.txt",
             bash_command = f"rm {path}",
             dag = dag
         )
