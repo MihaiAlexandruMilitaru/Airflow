@@ -37,7 +37,7 @@ with DAG(
     )
     task3 = SQLExecuteQueryOperator(
         task_id="create_table",
-        conn_id="airflow_postgres_conn",
+        conn_id="postgres_default",
         sql="""CREATE TABLE table_name(custom_id integer NOT NULL,
                         user_name VARCHAR (30) NOT NULL, timestamp TIMESTAMP NOT NULL);""",
         dag=dag
